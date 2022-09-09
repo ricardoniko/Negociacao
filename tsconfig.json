@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        // Gravar os arquivos resultantes
+        "outDir": "app/dist/js",
+        //Converter todo o código para o ECMASCRIPT6 
+        "target": "ES6",
+        //Não vai gerar arquivo js com problemas, não vai gerar os arquivos js enquanto os arquivos ts não estiver passando na compilação;
+        "noEmitOnError": true,
+        //TypeScript vai forçar colocar any ou colocar um tipo na declaração das propriedades de classe
+        "noImplicitAny": true,
+        //Remove todos os comentarios dos arquivos compilados do typescript para javascript, os arquivos typescript continuam com os comentarios.
+        "removeComments": true,
+        //O typescript por padrão tem a propriedade strictNullChecks que começa com false.
+        // Quando ativado: Diz para o compilador TSC que pare de assumir implicitamente o tipo null para todos os tipos da aplicação. Caso null faça sentido, o desenvolvedor deve deixar isso explícito em seu código. Inclusive o StrictNullChecks obrigará o desenvolvedor a tratar todos os pontos de acesso a valores null em sua aplicação, forçando que o desenvolvedor pondere com cuidado cada cenário.
+        "strictNullChecks": true,
+        //Informando para o typescript que vai ser utilizado o Decorators
+        "experimentalDecorators": true,
+        //Permite em tempo de desenvolvimento, colocar breackpoint nos arquivos typescript e debugar no navegador como se o código estivesse rodando em typescript.
+        //(Somente em desenvolvimento, nunca em produção)
+        "sourceMap": true
+    },
+    //Incluindo a pasta app, toda a subpasta(**) e qualquer arquivo(*)
+    //Tudo que estiver dentro do app, for .ts, converter e joga na pasta dist/js
+    "include": ["app/src/**/*"]
+}

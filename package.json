@@ -1,0 +1,23 @@
+{
+  "name": "alurabank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "lite-server --baseDir=dist",
+    "__comentario-da-linha-abaixo": "Executando varios scrips em pararelo",
+    "start": "concurrently \"npm run watch\" \"npm run server\"",
+    "_comentario-da-linha-abaixo": "Toda vez que rodar o script, o node procura o modulo do tsc(type script compile) dentro da pasta node_modules para converter os arquivos ts para arquivos js.",
+    "compile": "tsc",
+    "_comentario-da-linha--abaixo": "Compilador typescript ficar monitorando os arquivos das pastas que foram adicionadas dentro do include no arquivo tsconfig.json.",
+    "watch": "tsc -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "lite-server": "^2.6.1",
+    "typescript": "^4.8.2"
+  }
+} 
